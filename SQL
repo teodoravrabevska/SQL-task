@@ -1,0 +1,6 @@
+PatientID | CustomerName     | City     | Мanipulation       |  Age  | Price | 
+1         |  Anna Staneva    | Sofia    | Tooth extraction   |  67   | 70,00 |   
+2         |  Ivan Petrov     | Sofia    | Еxamination        |   32  | 50,00 |       
+3         | Yana Aleksieva   | Sofia    | Teeth whitening    |  23   | 80,00 |
+4         |  Silvia Donkin   | Sofia    | Tooth extraction   |  67   | 70,00 |            
+5         |  Stefan Hristov  | Sofia    | Еxamination        |  42   | 50,00 |
