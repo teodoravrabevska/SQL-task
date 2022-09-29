@@ -27,10 +27,58 @@ SELECT DISTINCT City FROM Patients
 |Varna|
 
 
-Selects all the patients with the price "50", in the "Patients" table:
+-Selects all the patients with the price "50", in the "Patients" table:
 
 SELECT * FROM Patients WHERE Price='50'
 
 PatientID | CustomerName     | City     | Мanipulation       |  Age  | Price | 
 1         |  Ivan Petrov     | Sofia    | Еxamination        |  32   | 50,00 | 
 2         |  Stefan Hristov  | Varna    | Еxamination        |  42   | 50,00 |
+
+
+-Select all fields from "Patients" where age is "67" and price is "70"
+
+SELECT * FROM Patients WHERE Age='67' AND Price='70'
+
+PatientID | CustomerName     | City     | Мanipulation       |  Age  | Price | 
+1         |  Anna Staneva    | Sofia    | Tooth extraction   |  67   | 70,00 |   
+
+
+-Insert new records in a "Patients"
+
+INSERT INTO Patients (CustomerName, City, Manipulation, Age, Price,)
+VALUES ('Savina Iordanova', 'Plovdiv', 'Tooth extraction', '41', '70')
+
+PatientID | CustomerName     | City     | Мanipulation       |  Age  | Price | 
+1         | Anna Staneva     | Sofia    | Tooth extraction   |  67   | 70,00 |   
+2         | Ivan Petrov      | Sofia    | Еxamination        |  32   | 50,00 |       
+3         | Yana Aleksieva   | Sofia    | Teeth whitening    |  23   | 80,00 |
+4         | Silvia Donkin    | Sofia    | Tooth extraction   |  67   | 70,00 |            
+5         | Stefan Hristov   | Varna    | Еxamination        |  42   | 50,00 |
+6         | Savina Iordanova | Plovdiv  | Tooth extraction   |  41   | 70.00 |
+
+
+
+-Delete the customer "Ivan Petrov" from the "Patients" table
+
+DELETE FROM Patients WHERE CustomerName='Ivan Petrov'
+
+PatientID | CustomerName     | City     | Мanipulation       |  Age  | Price | 
+1         | Anna Staneva     | Sofia    | Tooth extraction   |  67   | 70,00 |   
+2         | Yana Aleksieva   | Sofia    | Teeth whitening    |  23   | 80,00 |
+3         | Silvia Donkin    | Sofia    | Tooth extraction   |  67   | 70,00 |            
+4         | Stefan Hristov   | Varna    | Еxamination        |  42   | 50,00 |
+5         | Savina Iordanova | Plovdiv  | Tooth extraction   |  41   | 70.00 |
+
+
+Update the first customer (PatientID = 1) with a new city
+
+UPDATE Patients SET CustomerName = 'Anna Staneva', City= 'Pleven' WHERE PatientID = 1
+
+PatientID | CustomerName     | City     | Мanipulation       |  Age  | Price | 
+1         | Anna Staneva     | Pleven   | Tooth extraction   |  67   | 70,00 |   
+2         | Yana Aleksieva   | Sofia    | Teeth whitening    |  23   | 80,00 |
+3         | Silvia Donkin    | Sofia    | Tooth extraction   |  67   | 70,00 |            
+4         | Stefan Hristov   | Varna    | Еxamination        |  42   | 50,00 |
+5         | Savina Iordanova | Plovdiv  | Tooth extraction   |  41   | 70.00 |
+
